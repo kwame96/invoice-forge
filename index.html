@@ -3,7 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invoice Forge — Professional Invoice Generator</title>
+  <title>Free Invoice Generator — No Signup, No Subscription | Invoice Forge</title>
+  <meta name="description" content="Create professional invoices in seconds. Free to use, no account, works offline. Add line items, tax, multiple currencies, and print to PDF. Own it forever for $12." />
+  <meta name="keywords" content="free invoice generator, invoice maker, freelance invoice, invoice template, pdf invoice, no signup invoice" />
+  <link rel="canonical" href="https://kwame96.github.io/invoice-forge/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Invoice Generator — No Signup, Works Offline" />
+  <meta property="og:description" content="Create professional invoices in seconds. Free, no account, print to PDF. Own it forever for $12." />
+  <meta property="og:url" content="https://kwame96.github.io/invoice-forge/" />
+  <meta property="og:site_name" content="Invoice Forge" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Invoice Generator — No Signup, Works Offline" />
+  <meta name="twitter:description" content="Create professional invoices in seconds. Free, no account, print to PDF. Own it forever for $12." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Invoice Forge",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Free invoice generator for freelancers. No signup, works offline, print to PDF.",
+    "offers": { "@type": "Offer", "price": "12", "priceCurrency": "USD" }
+  }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -404,6 +429,69 @@
     .pro-banner-text h3 { font-size: 1rem; font-weight: 700; margin-bottom: 3px; }
     .pro-banner-text p { font-size: 0.82rem; opacity: 0.7; }
 
+    /* ── HERO / LANDING ─────────────────────────────── */
+    .hero {
+      background: radial-gradient(circle at 20% 30%, #1e3a5f 0%, var(--slate) 60%);
+      color: var(--white);
+      text-align: center;
+      padding: 64px 24px 56px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.4);
+      color: var(--amber);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+    .hero h1 span { color: var(--amber); }
+    .hero p {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      max-width: 540px;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .hero-cta .btn { padding: 12px 26px; font-size: 0.95rem; }
+    .hero-features {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .hero-feature {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #cbd5e1;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 100px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.9rem; }
+    }
+
     /* ── PRINT STYLES ───────────────────────────────── */
     @media print {
       @page { margin: 0; size: A4; }
@@ -411,6 +499,7 @@
       body { background: white; }
 
       header,
+      .hero,
       .controls,
       .pro-banner,
       .inv-footer { display: none !important; }
@@ -469,8 +558,26 @@
   </div>
 </header>
 
+<!-- HERO / LANDING -->
+<section class="hero">
+  <div class="hero-eyebrow">Free to use · No signup · Works offline</div>
+  <h1>Create professional invoices in <span>seconds</span></h1>
+  <p>A no-nonsense invoice generator for freelancers and consultants. Fill in your details, add line items, print to PDF. No account, no monthly fee — use it free, or own it forever for $12.</p>
+  <div class="hero-cta">
+    <a href="#app" class="btn btn-amber">Start free →</a>
+    <a href="https://kwame8.gumroad.com/l/nduywo" target="_blank" class="btn btn-ghost">Own it forever — $12</a>
+  </div>
+  <div class="hero-features">
+    <span class="hero-feature">✓ Print to PDF</span>
+    <span class="hero-feature">✓ 6 currencies</span>
+    <span class="hero-feature">✓ Auto tax & totals</span>
+    <span class="hero-feature">✓ Saves your work</span>
+    <span class="hero-feature">✓ 100% offline</span>
+  </div>
+</section>
+
 <!-- MAIN LAYOUT -->
-<div class="app">
+<div class="app" id="app">
 
   <!-- CONTROLS SIDEBAR -->
   <aside class="controls">
