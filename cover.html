@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 90px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 520px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,158,11,0.15);
+    border: 1px solid rgba(245,158,11,0.4);
+    color: #f59e0b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 100px;
+    width: fit-content;
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  h1 span { color: #f59e0b; }
+
+  .tagline {
+    font-size: 22px;
+    color: #94a3b8;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .pills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #cbd5e1;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+
+  /* MOCK INVOICE */
+  .mock {
+    width: 420px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+    transform: rotate(2deg);
+  }
+
+  .mock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .mock-biz { font-size: 16px; font-weight: 800; color: #0f172a; }
+  .mock-biz-sub { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+
+  .mock-inv-label { font-size: 26px; font-weight: 900; color: #f59e0b; text-align: right; }
+  .mock-inv-num { font-size: 11px; color: #94a3b8; text-align: right; }
+
+  .mock-divider { height: 1px; background: #e2e8f0; margin: 16px 0; }
+
+  .mock-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #64748b;
+    margin-bottom: 6px;
+  }
+
+  .mock-row span:last-child { font-weight: 700; color: #0f172a; }
+
+  .mock-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  .mock-table th {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #94a3b8;
+    text-align: left;
+    padding: 0 0 6px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .mock-table th:last-child { text-align: right; }
+  .mock-table td {
+    font-size: 11px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+  }
+  .mock-table td:last-child { text-align: right; font-weight: 700; }
+
+  .mock-total-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 12px;
+  }
+
+  .mock-total {
+    min-width: 150px;
+  }
+
+  .mock-total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+  }
+
+  .mock-grand {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 900;
+    color: #0f172a;
+    border-top: 2px solid #0f172a;
+    padding-top: 8px;
+    margin-top: 4px;
+  }
+
+  .mock-grand span:last-child { color: #f59e0b; }
+</style>
+</head>
+<body>
+
+  <div class="left">
+    <div class="badge">⚡ One-time download · $12</div>
+    <h1>Invoice<br><span>Forge</span></h1>
+    <div class="tagline">Professional invoices for freelancers.<br>No subscription. No login. Yours forever.</div>
+    <div class="pills">
+      <div class="pill">✓ Print to PDF</div>
+      <div class="pill">✓ Works Offline</div>
+      <div class="pill">✓ 6 Currencies</div>
+      <div class="pill">✓ Auto Totals</div>
+    </div>
+  </div>
+
+  <div class="mock">
+    <div class="mock-header">
+      <div>
+        <div class="mock-biz">Kwame Williams</div>
+        <div class="mock-biz-sub">hello@kwame.co</div>
+      </div>
+      <div>
+        <div class="mock-inv-label">INVOICE</div>
+        <div class="mock-inv-num">INV-024</div>
+      </div>
+    </div>
+
+    <div class="mock-divider"></div>
+
+    <div class="mock-row"><span>Date</span><span>May 19, 2026</span></div>
+    <div class="mock-row"><span>Due</span><span>June 18, 2026</span></div>
+    <div class="mock-row"><span>Bill To</span><span>Acme Corp</span></div>
+
+    <table class="mock-table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Rate</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Brand Identity Design</td><td>1</td><td>$1,200</td><td>$1,200.00</td></tr>
+        <tr><td>Website Redesign</td><td>1</td><td>$2,500</td><td>$2,500.00</td></tr>
+        <tr><td>Social Media Pack</td><td>3</td><td>$150</td><td>$450.00</td></tr>
+      </tbody>
+    </table>
+
+    <div class="mock-total-box">
+      <div class="mock-total">
+        <div class="mock-total-row"><span>Subtotal</span><span>$4,150.00</span></div>
+        <div class="mock-total-row"><span>Tax (10%)</span><span>$415.00</span></div>
+        <div class="mock-grand"><span>Total Due</span><span>$4,565.00</span></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
